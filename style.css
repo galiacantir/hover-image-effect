@@ -1,0 +1,75 @@
+body{
+    background-color: #222223;
+    
+}
+
+
+.effect-bubba{
+   font-family: 'Raleway', sans-serif; 
+   color: whitesmoke;
+   text-transform: uppercase;
+   
+   width: 600px;
+   height: 400px;
+
+   position: relative;
+}
+
+.effect-bubba .caption, 
+.effect-bubba .image,
+.effect-bubba .overlay{
+    position: absolute;
+}
+
+.effect-bubba .overlay{
+    
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.effect-bubba .caption{
+    border: 1px solid whitesmoke;
+
+    /* only with auto widt/height */
+    top: 30px;
+    left: 30px;
+    bottom: 30px;
+    right: 30px;
+
+    text-align: center;
+}
+
+.effect-bubba .caption h2{
+    font-size: 2em;
+    margin-top: 4em;
+    transform: translateY(-1em);
+    transition: .5s;
+}
+
+.effect-bubba .caption p{
+    letter-spacing: .2em;
+    opacity: 0;
+    transition: .5s;
+    transform: translateY(3em);
+}
+
+.effect-bubba .caption .thin{
+    font-weight: lighter;
+}
+
+
+/* hover state */
+
+.effect-bubba:hover .overlay{
+    background-color: #993300aa;
+}
+
+.effect-bubba:hover h2{
+    transform: translateY(0);
+}
+
+.effect-bubba:hover p{
+    opacity: 1;
+    transform: translateY(0);
+}
