@@ -29,7 +29,7 @@ body{
 }
 
 .effect-bubba .caption{
-    border: 1px solid whitesmoke;
+    /* border: 1px solid whitesmoke; */
 
     /* only with auto widt/height */
     top: 30px;
@@ -58,6 +58,52 @@ body{
     font-weight: lighter;
 }
 
+.effect-bubba .caption div{
+    position: absolute;
+}
+
+.effect-bubba .caption .border-t{
+    height: 1px;
+    width: 100%;
+    background-color: whitesmoke;
+    top:0;
+
+    transform: scaleX(0.0);
+    transition: 1s;
+}
+
+.effect-bubba .caption .border-r{
+    width: 1px;
+    height: 100%;
+    background-color: whitesmoke;
+    right:0;
+    top:0;
+
+    transform: scaleY(0.0);
+    transition: 1s;
+}
+
+.effect-bubba .caption .border-b{
+    height: 1px;
+    width: 100%;
+    background-color: whitesmoke;
+    bottom:0;
+
+    transform: scaleX(0.0);
+    transition: 1s;
+}
+
+.effect-bubba .caption .border-l{
+    width: 1px;
+    height: 100%;
+    background-color: whitesmoke;
+    left:0;
+    top:0;
+
+    transform: scaleY(0.0);
+    transition: 1s;
+}
+
 
 /* hover state */
 
@@ -72,4 +118,20 @@ body{
 .effect-bubba:hover p{
     opacity: 1;
     transform: translateY(0);
+}
+
+.effect-bubba:hover .caption .border-t{
+    transform: scaleX(1.0);
+}
+
+.effect-bubba:hover .caption .border-b{
+    transform: scaleX(1.0);
+}
+
+.effect-bubba:hover .caption .border-r{
+    transform: scaleX(1.0);
+}
+
+.effect-bubba:hover .caption .border-l{
+    transform: scaleX(1.0);
 }
